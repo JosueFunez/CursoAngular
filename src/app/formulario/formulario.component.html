@@ -1,0 +1,29 @@
+<div class="container mt-4">
+    <div class="d-flex justify-content-center"><h2>Validaciones de formulario</h2></div>
+   <div class="d-flex justify-content-center">
+    <form #formulario="ngForm">  
+        <div class="mb-3 mt-4">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" name="email" [(ngModel)]="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div *ngIf="formulario.controls['email'].invalid" id="emailHelp" class="form-text">Debes ingresar un correo electrónico válido.</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col ">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input name="nombre" type="text" [(ngModel)]="nombre" id="nombre" required class="form-control"  aria-label="Nombre">
+              </div>
+              <div class="col">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input name="apellido" id="apellido" type="text" [(ngModel)]="apellido"  class="form-control"  aria-label="Apellido">
+              </div>
+        </div>
+        <div *ngIf="!formulario.invalid" class="d-flex justify-content-center">
+            <div>Formulario listo para ser enviado </div>
+       </div>
+        <div class="d-flex justify-content-center mt-4">
+            <button [disabled]="formulario.invalid" type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+      
+   </div>
+</div>

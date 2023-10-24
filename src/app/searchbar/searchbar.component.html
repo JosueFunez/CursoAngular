@@ -1,0 +1,9 @@
+<form (submit)="onFormSubmit($event)"> 
+    <div class="input-group ">
+        <input (input)="onInput($event)" type="text" class="form-control"  placeholder="Buscar"  aria-describedby="passwordHelpBlock">
+        <button  class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+    </div>
+    <div id="passwordHelpBlock" class="form-text">
+        Ingrese su término de búsqueda para encontrar entradas relacionadas en Wikipedia.
+    </div>
+</form>

@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { WikipediaService } from './wikipedia.service';
+import { WikipediaService } from '../wikipedia.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class AppComponent {
+
+export class DashboardComponent {
+
   pages = []
   constructor(private wikipedia: WikipediaService){
 

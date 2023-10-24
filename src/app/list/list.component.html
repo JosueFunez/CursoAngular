@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Título</th>
+            <th scope="col">Palabras</th>
+            <th scope="col">Resumen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row" *ngFor="let page of pages">
+            <td>
+                <a target="_blank" [href]="'https://es.wikipedia.org?curid='+ page.pageid">{{ page.title }}</a> </td>
+            <td>{{ page.wordcount }}</td>
+            <td [innerHTML]="page.snippet"></td>
+        </tr>
+    </tbody>
+</table>
+
